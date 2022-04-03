@@ -1,0 +1,50 @@
+{
+    "name": "سورس بوت ميوزك فريدوم",
+    "description": "تشغيل موسيقى في حسابك الأساسي.",
+    "logo": "https://te.legra.ph/file/3022a443543e9cb4b207f.jpg",
+    "keywords": [
+        "تليجرام",
+        "ثليثون",
+        "موسيقى"
+    ],
+    "repository": "https://github.com/freedomSource/Source-Freedom",
+    "env": {
+        "SESSION": {
+            "description": "اكتب هنا كود ترمكس",
+            "required": true
+        },
+        "API_ID": {
+            "description": "انسخ هذه وضعة بالاسفل : 14298184",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "لاتغيرها ابدا اتركها كما هي",
+            "required": false,
+            "value": "."
+        },
+        "API_HASH": {
+            "description": "انسخ هذه وضعة في الفراغ : c531d0727df89656a374d7ef2485a779",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": " اكتب ايدي المطور او انسخ هذه وضعة في الاسفل : 1854384004 ",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
