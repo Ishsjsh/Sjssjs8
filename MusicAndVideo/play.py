@@ -278,9 +278,7 @@ async def vplay(client, m: Message):
             Q = 720
             hmmm = HighQualityVideo()
             if search == 0:
-                await huehue.edit(
-                    "**لم يتم العثور على نتائج**"
-                )
+                await huehue.edit("**لم يتم العثور على نتائج**")
             else:
                 songname = search[0]
                 title = search[0]
